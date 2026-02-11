@@ -13,7 +13,7 @@ app.use("/health", (req, res) => {
 });
 app.post("/github-webhook", async (req, res) => {
   console.log("Yes webhook trgieerd this agent.....");
-  console.log(req.body);
+  console.log(req.body.action);
   if (req.body.action !== "opened") {
     return res.send("ignored");
   }

@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.openaiKey,
+  apiKey: "process.env.openaiKey",
 });
 
 export async function reviewPR(diff, guidelines) {
@@ -27,5 +27,5 @@ Return APPROVE or provide review comments.
     ],
   });
 
-  return response.choices[0].message.content;
+  return "rejected because i said so .....and this is ajay doing statically for testing ....";
 }
